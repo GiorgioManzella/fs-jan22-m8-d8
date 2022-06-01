@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.chat {
+  border: 1px solid black;
+  width: 1000px;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.users {
+  width: 300px;
+  height: 600px;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
