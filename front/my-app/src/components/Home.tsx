@@ -32,7 +32,7 @@ const Home = () => {
   const [newMessage, setNewMessage] = useState('')
   const [chatHistory, setChatHistory] = useState<Message[]>([])
   const [room, setRoom] = useState<"blue" | "red">('blue')
-  const [privateRoom, setPrivateRoom] = useState<User[]>([])
+  const [privateRoom, setPrivateRoom] = useState<string>('red')
 
   const getChatHistory = async () => {
     const response = await fetch(ADDRESS + '/rooms/' + room)
@@ -205,7 +205,7 @@ const Home = () => {
             {onlineUsers
             .filter(u => u.room === room)
             .map((user) => (
-              <Button onClick={setPrivateRoom(user.socketId)} key={user.socketId}>{user.username}</Button>
+              <Button onClick={()=>setPrivateRoom(user.socketId)} key={user.socketId}>{user.username}</Button>
             ))}
           </ListGroup>
         </Col>
