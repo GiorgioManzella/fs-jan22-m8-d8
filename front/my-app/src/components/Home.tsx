@@ -31,7 +31,7 @@ const Home = () => {
   const [onlineUsers, setOnlineUsers] = useState<User[]>([])
   const [newMessage, setNewMessage] = useState('')
   const [chatHistory, setChatHistory] = useState<Message[]>([])
-  const [room, setRoom] = useState<"blue" | "red">('blue')
+  const [room, setRoom] = useState<"blue" | "red" | typeof inputUserName>('blue')
   const [privateRoom, setPrivateRoom] = useState<string>('red')
 
   const getChatHistory = async () => {
